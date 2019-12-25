@@ -1,6 +1,6 @@
 " Theme settings
 colorscheme solarized
-set background=dark
+set background=light
 
 " Enable sytax highlighting
 syntax enable
