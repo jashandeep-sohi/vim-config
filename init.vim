@@ -111,14 +111,6 @@ set smartcase
 " Always show status line
 set laststatus=2
 
-" coc.nvim
-set hidden
-set nobackup
-set nowritebackup
-set cmdheight=2
-set updatetime=300
-set shortmess+=c
-
 " Write as sudo
 command SudoWrite w !sudo -A tee % > /dev/null
 
@@ -135,13 +127,18 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline_powerline_fonts = 1
 
 " faster window navigation
-noremap <leader>wj <C-W>j
-noremap <leader>wk <C-W>k
-noremap <leader>wh <C-W>h
-nnoremap <leader>wl <C-W>l
+nnoremap <leader>wj <c-w>j
+nnoremap <leader>wk <c-w>k
+nnoremap <leader>wh <c-w>h
+nnoremap <leader>wl <c-w>l
 
 " equal out windows
-nnoremap <leader>w= <C-W>=
+nnoremap <leader>w= <c-w>e
+
+" create splits
+ nnoremap <leader>ws :vsplit<cr>
+ nnoremap <leader>wsv :vsplit<cr>
+ nnoremap <leader>wsh :split<cr>
 
 " coc.nvim
 " TODO: clean these up
@@ -153,7 +150,7 @@ set nobackup
 set nowritebackup
 
 " Give more space for displaying messages.
-set cmdheight=2
+set cmdheight=1
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
